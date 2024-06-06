@@ -6,7 +6,7 @@ with reviews as (
         comments review_text,
         sentiment review_sentiment
     from
-        AIRBNB.RAW.raw_reviews
+        {{ source("airbnb","reviews")}}
 )
 select
     *
